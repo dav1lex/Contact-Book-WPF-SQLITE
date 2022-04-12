@@ -107,6 +107,37 @@
                 </Trigger>
             </Style.Triggers>
         </Style>
+        <Style x:Key="btn-clear" TargetType="Button" BasedOn="{StaticResource btn}">
+            <Setter Property="Foreground">
+                <Setter.Value>
+                    <SolidColorBrush Color="#fff"/>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Background">
+                <Setter.Value>
+                    <SolidColorBrush Color="#FF00CCAF"/>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="BorderBrush">
+                <Setter.Value>
+                    <SolidColorBrush Color="#FF00C2AF"/>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#FF00B99A"/>
+                    <Setter Property="BorderBrush" Value="#FF00A5AF"/>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter Property="Background" Value="#FF0092AF"/>
+                    <Setter Property="BorderBrush" Value="#FF00A5AF"/>
+                </Trigger>
+                <Trigger Property="ToggleButton.IsChecked" Value="True">
+                    <Setter Property="Background" Value="#FF0092AF"/>
+                    <Setter Property="BorderBrush" Value="#FF00A5AF"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
         <Style x:Key="btn-success" TargetType="Button" BasedOn="{StaticResource btn}">
             <Setter Property="Foreground">
                 <Setter.Value>

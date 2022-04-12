@@ -45,33 +45,33 @@
         <TextBlock  Margin="0,0,0,15" Grid.Row="3" Grid.Column="1" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="/Kontaktbook;component/Font/#HelveticaNeue" FontWeight="Bold" Text="Surname"/>
         <TextBlock Text="Phone number" Margin="0,0,0,15" Grid.Row="4" Grid.Column="1" FontSize="20" HorizontalAlignment="Center" FontFamily="/Kontaktbook;component/Font/#HelveticaNeue" VerticalAlignment="Center" FontWeight="Bold"></TextBlock>
         <TextBlock Text="E-mail" Grid.Row="5" Margin="0,0,0,15"  Grid.Column="1" FontSize="20" HorizontalAlignment="Center" FontFamily="/Kontaktbook;component/Font/#HelveticaNeue" VerticalAlignment="Center" FontWeight="Bold"></TextBlock>
-        <TextBlock Text="Date of birth" Margin="0,0,0,15" Grid.Row="6" Grid.Column="1" FontSize="20" HorizontalAlignment="Center" FontFamily="/Kontaktbook;component/Font/#HelveticaNeue" VerticalAlignment="Center" FontWeight="Bold"></TextBlock>
+        <TextBlock Text="Date of birth" Margin="0,7,0,13" Grid.Row="6" Grid.Column="1" FontSize="20" HorizontalAlignment="Center" FontFamily="/Kontaktbook;component/Font/#HelveticaNeue" VerticalAlignment="Center" FontWeight="Bold"></TextBlock>
 
-        <Button x:Name="btnsubmit"  Grid.Column="1" Content="Add Contact" Grid.Row="7" HorizontalAlignment="Center" Margin="0,17" Height="59" Width="113"
-                FontFamily="/Kontaktbook;component/Font/#HelveticaNeue" Style="{StaticResource btn-success}" VerticalAlignment="Center" FontSize="16" Grid.ColumnSpan="2" Click="btnsubmit_Click">
+        <Button x:Name="btnsubmit"  Grid.Column="1" Content="Add Contact" Grid.Row="7" HorizontalAlignment="Center" Margin="0,17" Height="59" Width="155"
+                FontFamily="/Kontaktbook;component/Font/#HelveticaNeue" Style="{StaticResource btn-success}" VerticalAlignment="Center" FontSize="25" Grid.ColumnSpan="2" Click="btnsubmit_Click">
             <Button.Effect>
                 <DropShadowEffect BlurRadius="7" Direction="318" Opacity="0.3" ShadowDepth="4"/>
             </Button.Effect>
         </Button>
-        <Button x:Name="btnclear"  Grid.Column="4" Content="Clear" Grid.Row="7" Height="40" Width="90" Margin="0" FontFamily="/Kontaktbook;component/Font/#HelveticaNeue" Style="{StaticResource btn-primary}" HorizontalAlignment="Left" Click="btnclear_Click" Background="#FF42C0CA" VerticalAlignment="Center" >
+        <Button x:Name="btnclear"  Grid.Column="4" Content="Clear" Grid.Row="7" Height="55" Width="105" Margin="0" FontFamily="/Kontaktbook;component/Font/#HelveticaNeue" Style="{StaticResource btn-clear}" HorizontalAlignment="Left" Click="btnclear_Click" VerticalAlignment="Center" FontSize="25">
             <Button.Effect>
                 <DropShadowEffect BlurRadius="7" Direction="318" Opacity="0.3" ShadowDepth="4"/>
             </Button.Effect>
         </Button>
-        <Button x:Name="btndelete"  Grid.Column="4" Content="Delete" Grid.Row="7" HorizontalAlignment="Right" VerticalAlignment="Center" Width="90" FontFamily="/Kontaktbook;component/Font/#HelveticaNeue"
-                Style="{StaticResource btn-danger}" Height="40" Margin="0" Click="btndelete_Click">
+        <Button x:Name="btndelete"  Grid.Column="4" Content="Delete" Grid.Row="7" HorizontalAlignment="Right" VerticalAlignment="Center" Width="105" FontFamily="/Kontaktbook;component/Font/#HelveticaNeue"
+                Style="{StaticResource btn-danger}" Height="55" Margin="0" Click="btndelete_Click" FontSize="25">
             <Button.Effect>
                 <DropShadowEffect BlurRadius="7" Direction="318" Opacity="0.3" ShadowDepth="4"/>
             </Button.Effect>
         </Button>
-        <Button x:Name="btnrefresh"  Grid.Column="4" Content="Refresh" Grid.Row="7" HorizontalAlignment="Right" VerticalAlignment="Center" Width="90" FontFamily="/Kontaktbook;component/Font/#HelveticaNeue" 
-                Style="{StaticResource btn-warning}" Height="40" Margin="0,0,140,0" Click="btnrefresh_Click">
+        <Button x:Name="btnrefresh"  Grid.Column="4" Content="Refresh" Grid.Row="7" HorizontalAlignment="Right" VerticalAlignment="Center" Width="105" FontFamily="/Kontaktbook;component/Font/#HelveticaNeue" 
+                Style="{StaticResource btn-warning}" Height="55" Margin="0,0,125,0" Click="btnrefresh_Click" FontSize="25">
             <Button.Effect>
                 <DropShadowEffect BlurRadius="7" Direction="318" Opacity="0.3" ShadowDepth="4"/>
             </Button.Effect>
         </Button>
-        <Button x:Name="btnupdate"  Grid.Column="4" Content="Update" Grid.Row="7" HorizontalAlignment="Left" VerticalAlignment="Center" Width="90" FontFamily="/Kontaktbook;component/Font/#HelveticaNeue" 
-                Style="{StaticResource btn-primary}" Height="40" Margin="135,0,0,0" Click="btnupdate_Click">
+        <Button x:Name="btnupdate"  Grid.Column="4" Content="Update" Grid.Row="7" HorizontalAlignment="Left" VerticalAlignment="Center" Width="105" FontFamily="/Kontaktbook;component/Font/#HelveticaNeue" 
+                Style="{StaticResource btn-primary}" Height="55" Margin="125,0,0,0" Click="btnupdate_Click" FontSize="25">
             <Button.Effect>
                 <DropShadowEffect BlurRadius="7" Direction="318" Opacity="0.3" ShadowDepth="4"/>
             </Button.Effect>
@@ -82,7 +82,7 @@
         <TextBox x:Name="txtSurname" Grid.Column="2" Grid.Row="3" BorderBrush="Black" Width="115" Height="20" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,15" FontFamily="/Kontaktbook;component/Font/#HelveticaNeue" FontSize="15" SelectionBrush="#FFA4A4A4" />
         <TextBox x:Name="txtPhone" Grid.Column="2" Grid.Row="4" BorderBrush="Black" Width="115" Height="20" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,15" FontFamily="/Kontaktbook;component/Font/#HelveticaNeue" FontSize="15" SelectionBrush="#FFA4A4A4" />
         <TextBox x:Name="txtemail" Grid.Column="2" Grid.Row="5" BorderBrush="Black" Width="115" Height="20" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,15" FontFamily="/Kontaktbook;component/Font/#HelveticaNeue" FontSize="15" SelectionBrush="#FFA4A4A4" />
-        <DatePicker x:Name="btndatepicker" Grid.Column="2" Grid.Row="6" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="/Kontaktbook;component/Font/#HelveticaNeue" Margin="0,0,0,15" Width="115" Height="30" FontSize="15"/>
+        <DatePicker x:Name="btndatepicker" Grid.Column="2" Grid.Row="6" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="/Kontaktbook;component/Font/#HelveticaNeue" Margin="0,0,0,-1" Width="117" Height="31" FontSize="15" BorderBrush="#99FDFDFD"/>
 
 
         <Label  Content="Selected User's ID: " Grid.Column="4" Margin="60,0,0,0" Grid.Row="1" FontFamily="/Kontaktbook;component/Font/#HelveticaNeue" />
