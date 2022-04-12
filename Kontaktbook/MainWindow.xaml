@@ -1,0 +1,105 @@
+﻿<Window x:Class="Kontaktbook.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Kontaktbook"
+        mc:Ignorable="d"
+        
+         Height="450" Width="800" ResizeMode="NoResize" Title="Contact Book"  >
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+            <GradientStop Color="#FFB2B2B2" Offset="1"/>
+            <GradientStop Color="White"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <Grid Height="432">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="20"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="20"/>
+
+        </Grid.RowDefinitions>
+        <TextBlock Text="Contact Book" Grid.ColumnSpan="2" Grid.Row="1" Grid.Column="1" Margin="-5,-30,0,0" FontFamily="/Kontaktbook;component/Font/#HelveticaNeue" FontSize="48"   >
+            <TextBlock.Effect>
+                <DropShadowEffect Direction="352" BlurRadius="8" Opacity="0.3"/>
+            </TextBlock.Effect>
+        </TextBlock>
+        <TextBlock Text="Name" Margin="0,0,0,15" Grid.Row="2" Grid.Column="1" FontSize="20"  HorizontalAlignment="Center" FontFamily="/Kontaktbook;component/Font/#HelveticaNeue" VerticalAlignment="Center" FontWeight="Bold"/>
+        <TextBlock  Margin="0,0,0,15" Grid.Row="3" Grid.Column="1" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="/Kontaktbook;component/Font/#HelveticaNeue" FontWeight="Bold" Text="Surname"/>
+        <TextBlock Text="Phone number" Margin="0,0,0,15" Grid.Row="4" Grid.Column="1" FontSize="20" HorizontalAlignment="Center" FontFamily="/Kontaktbook;component/Font/#HelveticaNeue" VerticalAlignment="Center" FontWeight="Bold"></TextBlock>
+        <TextBlock Text="E-mail" Grid.Row="5" Margin="0,0,0,15"  Grid.Column="1" FontSize="20" HorizontalAlignment="Center" FontFamily="/Kontaktbook;component/Font/#HelveticaNeue" VerticalAlignment="Center" FontWeight="Bold"></TextBlock>
+        <TextBlock Text="Date of birth" Margin="0,0,0,15" Grid.Row="6" Grid.Column="1" FontSize="20" HorizontalAlignment="Center" FontFamily="/Kontaktbook;component/Font/#HelveticaNeue" VerticalAlignment="Center" FontWeight="Bold"></TextBlock>
+
+        <Button x:Name="btnsubmit"  Grid.Column="1" Content="Add Contact" Grid.Row="7" HorizontalAlignment="Center" Margin="0,17" Height="59" Width="113"
+                FontFamily="/Kontaktbook;component/Font/#HelveticaNeue" Style="{StaticResource btn-success}" VerticalAlignment="Center" FontSize="16" Grid.ColumnSpan="2" Click="btnsubmit_Click">
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="7" Direction="318" Opacity="0.3" ShadowDepth="4"/>
+            </Button.Effect>
+        </Button>
+        <Button x:Name="btnclear"  Grid.Column="4" Content="Clear" Grid.Row="7" Height="40" Width="90" Margin="0" FontFamily="/Kontaktbook;component/Font/#HelveticaNeue" Style="{StaticResource btn-primary}" HorizontalAlignment="Left" Click="btnclear_Click" Background="#FF42C0CA" VerticalAlignment="Center" >
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="7" Direction="318" Opacity="0.3" ShadowDepth="4"/>
+            </Button.Effect>
+        </Button>
+        <Button x:Name="btndelete"  Grid.Column="4" Content="Delete" Grid.Row="7" HorizontalAlignment="Right" VerticalAlignment="Center" Width="90" FontFamily="/Kontaktbook;component/Font/#HelveticaNeue"
+                Style="{StaticResource btn-danger}" Height="40" Margin="0" Click="btndelete_Click">
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="7" Direction="318" Opacity="0.3" ShadowDepth="4"/>
+            </Button.Effect>
+        </Button>
+        <Button x:Name="btnrefresh"  Grid.Column="4" Content="Refresh" Grid.Row="7" HorizontalAlignment="Right" VerticalAlignment="Center" Width="90" FontFamily="/Kontaktbook;component/Font/#HelveticaNeue" 
+                Style="{StaticResource btn-warning}" Height="40" Margin="0,0,140,0" Click="btnrefresh_Click">
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="7" Direction="318" Opacity="0.3" ShadowDepth="4"/>
+            </Button.Effect>
+        </Button>
+        <Button x:Name="btnupdate"  Grid.Column="4" Content="Update" Grid.Row="7" HorizontalAlignment="Left" VerticalAlignment="Center" Width="90" FontFamily="/Kontaktbook;component/Font/#HelveticaNeue" 
+                Style="{StaticResource btn-primary}" Height="40" Margin="135,0,0,0" Click="btnupdate_Click">
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="7" Direction="318" Opacity="0.3" ShadowDepth="4"/>
+            </Button.Effect>
+        </Button>
+
+
+        <TextBox x:Name="txtName" Grid.Column="2" Grid.Row="2" BorderBrush="Black" Height="20" Width="115" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,15" FontFamily="/Kontaktbook;component/Font/#HelveticaNeue" FontSize="15" SelectionBrush="#FFA4A4A4"  />
+        <TextBox x:Name="txtSurname" Grid.Column="2" Grid.Row="3" BorderBrush="Black" Width="115" Height="20" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,15" FontFamily="/Kontaktbook;component/Font/#HelveticaNeue" FontSize="15" SelectionBrush="#FFA4A4A4" />
+        <TextBox x:Name="txtPhone" Grid.Column="2" Grid.Row="4" BorderBrush="Black" Width="115" Height="20" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,15" FontFamily="/Kontaktbook;component/Font/#HelveticaNeue" FontSize="15" SelectionBrush="#FFA4A4A4" />
+        <TextBox x:Name="txtemail" Grid.Column="2" Grid.Row="5" BorderBrush="Black" Width="115" Height="20" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,15" FontFamily="/Kontaktbook;component/Font/#HelveticaNeue" FontSize="15" SelectionBrush="#FFA4A4A4" />
+        <DatePicker x:Name="btndatepicker" Grid.Column="2" Grid.Row="6" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="/Kontaktbook;component/Font/#HelveticaNeue" Margin="0,0,0,15" Width="115" Height="30" FontSize="15"/>
+
+
+        <Label  Content="Selected User's ID: " Grid.Column="4" Margin="60,0,0,0" Grid.Row="1" FontFamily="/Kontaktbook;component/Font/#HelveticaNeue" />
+        <Label x:Name="labelid"  Grid.Column="4" Margin="160,0,0,0" Grid.Row="1" FontWeight="Bold" FontFamily="Consolas" FontStyle="Italic" Height="46" />
+
+        <DataGrid x:Name="dataGrid" Grid.Row="2" Grid.RowSpan="5" Grid.Column="4" IsReadOnly="True" MouseDoubleClick="dataGrid_MouseDoubleClick" FontFamily="/Kontaktbook;component/Font/#HelveticaNeue" FontSize="16"/>
+        <Rectangle Grid.Column="1" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="2" Margin="0,0,0,23" Grid.Row="1" Stroke="#F2727272" VerticalAlignment="Bottom" Width="750" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="8">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+    </Grid>
+</Window>
+
+    
